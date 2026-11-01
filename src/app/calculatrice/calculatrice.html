@@ -1,4 +1,4 @@
 <div class="ecran">{{ affichage() }}</div>
-<button (click)="ajouter('1')">1</button>
-<button (click)="ajouter('2')">2</button>
-<button (click)="ajouter('3')">3</button>
+@for (t of touches; track t){
+    <button (click)="ajouter(t)">{{ t }}</button>
+}
