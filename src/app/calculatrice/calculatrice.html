@@ -1,8 +1,5 @@
-<div class="ecran">{{ affichage() }}</div>
-@for (t of touches; track t){
-    <button (click)="ajouter(t)">{{ t }}</button>
-}
-<br>
+<app-ecran [valeur]="affichage()" />
+<app-clavier (touche)="ajouter($event)"/>
 <button (click)="effacer()">C</button>
 <button (click)="suprimmer()">⌫</button>
 <button (click)="calculer()">=</button>
