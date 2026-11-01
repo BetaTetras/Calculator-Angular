@@ -1,3 +1,11 @@
-@for (t of touches; track t) {
-  <button (click)="touche.emit(t)">{{ t }}</button>
-}
+<div class="chiffres">
+  @for (t of chiffres; track t) {
+    <button (click)="touche.emit(t)">{{ t }}</button>
+  }
+</div>
+
+<div class="operateurs">
+  @for (t of operateurs; track t) {
+    <button class="ope" (click)="touche.emit(t)">{{ t }}</button>
+  }
+</div>

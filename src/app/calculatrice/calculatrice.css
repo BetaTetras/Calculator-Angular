@@ -1,0 +1,49 @@
+/* La calculatrice entière : boîte grise centrée, largeur fixe */
+:host {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* les boutons C ⌫ = sur une ligne de 3 */
+  gap: 10px;
+  width: 320px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #4a4a4a;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* L'écran et le clavier prennent toute la largeur */
+app-ecran,
+app-clavier {
+  grid-column: 1 / -1;
+}
+
+/* Boutons C ⌫ = */
+button {
+  font-family: inherit;
+  font-size: 22px;
+  padding: 14px 0;
+  border: none;
+  border-radius: 12px;
+  background: #d9d9d9;
+  color: #222;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* C en rouge, = en orange */
+button:first-of-type {
+  background: #e05a4f;
+  color: white;
+}
+
+button:last-of-type {
+  background: #f39c12;
+  color: white;
+}
